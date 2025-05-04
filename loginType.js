@@ -5,7 +5,7 @@ function loginRedirect() {
     if (username === "admin" && password === "1234") {
       window.location.href = "adminHome.html";
     } else if (username === "user" && password === "1234") {
-      window.location.href = "userHome.html";
+      window.location.href = "index.html";
     } else {
       alert("Incorrect username or password.");
     }
