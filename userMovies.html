@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Movies Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="smallLogo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="smallLogo.png">
@@ -27,46 +27,57 @@
             <img class="profile-pic" src="Profile_Photo.jpg" alt="Profile Picture">
             <button class="profile-button" id="profileBtn">Profile</button>
             <div class="dropdown-menu" id="dropdownMenu">
-                <a href="userSettings.html">My Account</a>
-                <a href="userSettings.html">Settings</a>
+                <a href="#">My Account</a>
+                <a href="#">Settings</a>
                 <a href="#">Log Out</a>
             </div>
         </div>
     </div>
-
     <div class="content">
         <div class = "featured-content"
-            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #E7DED8), url('img/seat.jpg');">
-            <img class="featured-title" src="img/Avengers.png" alt="Featured Title">
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #E7DED8), url('img/warB.jpg');">
+            <!--<img class="featured-title" src="img/warfarebanner.jpeg" alt="Featured Title">-->
             <p class ="featured-description">
-                "Marvel's The Avengers" is a superhero team-up movie where 
-                Earth's mightiest heroes (Iron Man, Captain America, Hulk, 
-                Thor, Black Widow, and Hawkeye) are assembled by S.H.I.E.L.D. 
-                to fight Loki's alien invasion led by the Chitauri.</p>
+                "Warfare" is a war film that explores the chaos and 
+                brotherhood of a Navy SEAL platoon during a dangerous mission in 
+                Ramadi, Iraq, in 2006. It focuses on a surveillance mission gone 
+                wrong, depicting the intense combat and its aftermath in real time. 
+                The film is based on the memories of the actual platoon members and 
+                aims to be a realistic portrayal of modern warfare. </p>
             <button class="featured-button">WATCH</button>
         </div>
+        <div class="filter-container">
+            <select id="filterSelect">
+                <option value="default">Sort/Filter</option>
+                <option value="az">A - Z</option>
+                <option value="za">Z - A</option>
+                <option value="genre-action">Genre: Action</option>
+                <option value="genre-drama">Genre: Drama</option>
+                <option value="genre-comedy">Genre: Comedy</option>
+            </select>
+        </div>
         <div class="movie-list-container">
-            <h1 class="movie-list-title">CONTINUE WATCHING</h1>
+            <h1 class="movie-list-title">NEXT BIG WATCH</h1>
             <div class="movie-list-wrapper">
                 <div class="arrow-icon left">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <div class="movie-list">
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/AvenPoster.jpg" alt="Movie Poster">
-                        <span class="movie-title">Avengers</span>
+                        <img class="movie-poster" src="img/warfare.jpg" alt="Movie Poster">
+                        <span class="movie-title">Warfare</span>
+                        <p class="movie-description">"Warfare" is a war film that explores the chaos and brotherhood of a Navy SEAL platoon during a dangerous mission in Ramadi, Iraq, in 2006. It focuses on a surveillance mission gone wrong, depicting the intense combat and its aftermath in real time. The film is based on the memories of the actual platoon members and aims to be a realistic portrayal of modern warfare. </p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/batman.jpg" alt="Movie Poster">
+                        <span class="movie-title">Batman</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/TrapPoster.jpg" alt="Movie Poster">
-                        <span class="movie-title">Trap</span>
-                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/Dexter.jpg" alt="Movie Poster">
-                        <span class="movie-title">Dexter</span>
+                        <img class="movie-poster" src="img/annabelle.jpg" alt="Movie Poster">
+                        <span class="movie-title">Annabelle</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -77,8 +88,8 @@
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/GG.jpg" alt="Movie Poster">
-                        <span class="movie-title">Gilmore Girls</span>
+                        <img class="movie-poster" src="img/fnaf.jpg" alt="Movie Poster">
+                        <span class="movie-title">Five Nights At Freddy's</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -89,8 +100,8 @@
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/yellowJ.jpeg" alt="Movie Poster">
-                        <span class="movie-title">Yellowjackets</span>
+                        <img class="movie-poster" src="img/goofel.jpg" alt="Movie Poster">
+                        <span class="movie-title">Goodfellas</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -101,15 +112,15 @@
                 </div>
             </div>
         </div>
-        <h1 class="movie-list-title">NEW TO BINGEBOX</h1>
+        <h1 class="movie-list-title">TOP PICKS</h1>
             <div class="movie-list-wrapper">
                 <div class="arrow-icon left">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <div class="movie-list">
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/AvenPoster.jpg" alt="Movie Poster">
-                        <span class="movie-title">Avengers</span>
+                        <img class="movie-poster" src="img/johnWick.jpg" alt="Movie Poster">
+                        <span class="movie-title">John Wick</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -120,20 +131,20 @@
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/Dexter.jpg" alt="Movie Poster">
-                        <span class="movie-title">Dexter</span>
+                        <img class="movie-poster" src="img/AvenPoster.jpg" alt="Movie Poster">
+                        <span class="movie-title">Avengers</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/fightclub.jpg" alt="Movie Poster">
-                        <span class="movie-title">Fight Club</span>
+                        <img class="movie-poster" src="img/blackP.jpeg" alt="Movie Poster">
+                        <span class="movie-title">Black Panther</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/GG.jpg" alt="Movie Poster">
-                        <span class="movie-title">Gilmore Girls</span>
+                        <img class="movie-poster" src="img/gardofgal.jpg_large" alt="Movie Poster">
+                        <span class="movie-title">Guardians of The Galaxy</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -144,8 +155,8 @@
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/yellowJ.jpeg" alt="Movie Poster">
-                        <span class="movie-title">Yellowjackets</span>
+                        <img class="movie-poster" src="img/shark.jpg" alt="Movie Poster">
+                        <span class="movie-title">Sharknado</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -154,27 +165,15 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
-            <h1 class="movie-list-title">MOVIES STARRING ZENDAYA</h1>
+            <h1 class="movie-list-title">AWARD-WINNING MOVIES</h1>
             <div class="movie-list-wrapper">
                 <div class="arrow-icon left">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <div class="movie-list">
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/AvenPoster.jpg" alt="Movie Poster">
-                        <span class="movie-title">Avengers</span>
-                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/TrapPoster.jpg" alt="Movie Poster">
-                        <span class="movie-title">Trap</span>
-                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/Dexter.jpg" alt="Movie Poster">
-                        <span class="movie-title">Dexter</span>
+                        <img class="movie-poster" src="img/wicked.jpg" alt="Movie Poster">
+                        <span class="movie-title">Wicked</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -185,20 +184,32 @@
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/GG.jpg" alt="Movie Poster">
-                        <span class="movie-title">Gilmore Girls</span>
+                        <img class="movie-poster" src="img/swIV.jpg" alt="Movie Poster">
+                        <span class="movie-title">Star Wars: A New Hope</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/wicked.jpg" alt="Movie Poster">
-                        <span class="movie-title">Wicked</span>
+                        <img class="movie-poster" src="img/blackPW.jpg" alt="Movie Poster">
+                        <span class="movie-title">Black Panther: Wakanda Forever</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/yellowJ.jpeg" alt="Movie Poster">
-                        <span class="movie-title">Yellowjackets</span>
+                        <img class="movie-poster" src="img/swV.jpg" alt="Movie Poster">
+                        <span class="movie-title">Star Wars: The Empire Strikes Back</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/johnWick.jpg" alt="Movie Poster">
+                        <span class="movie-title">John Wick</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/pitchP.jpg" alt="Movie Poster">
+                        <span class="movie-title">Pitch Perfect</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -207,27 +218,27 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
-            <h1 class="movie-list-title">TOP RATED SHOWS</h1>
+            <h1 class="movie-list-title">HIGHLY RATED</h1>
             <div class="movie-list-wrapper">
                 <div class="arrow-icon left">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
                 <div class="movie-list">
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/AvenPoster.jpg" alt="Movie Poster">
-                        <span class="movie-title">Avengers</span>
+                        <img class="movie-poster" src="img/dm.jpg" alt="Movie Poster">
+                        <span class="movie-title">Despicable Me</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/TrapPoster.jpg" alt="Movie Poster">
-                        <span class="movie-title">Trap</span>
+                        <img class="movie-poster" src="img/savingPR.jpg" alt="Movie Poster">
+                        <span class="movie-title">Saving Private Ryan</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/Dexter.jpg" alt="Movie Poster">
-                        <span class="movie-title">Dexter</span>
+                        <img class="movie-poster" src="img/swII.jpg" alt="Movie Poster">
+                        <span class="movie-title">Star Wars: Attack of the Clones</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -238,20 +249,20 @@
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/GG.jpg" alt="Movie Poster">
-                        <span class="movie-title">Gilmore Girls</span>
+                        <img class="movie-poster" src="img/warfare.jpg" alt="Movie Poster">
+                        <span class="movie-title">Warfare</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/wicked.jpg" alt="Movie Poster">
-                        <span class="movie-title">Wicked</span>
+                        <img class="movie-poster" src="img/fnaf.jpg" alt="Movie Poster">
+                        <span class="movie-title">Five Nights At Freddy's/span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/yellowJ.jpeg" alt="Movie Poster">
-                        <span class="movie-title">Yellowjackets</span>
+                        <img class="movie-poster" src="img/batman.jpg" alt="Movie Poster">
+                        <span class="movie-title">Batman</span>
                         <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>

@@ -8,10 +8,13 @@ html, body {
     min-height: 100%; /* Ensure the page takes up the full height of the viewport */
     display: flex;
     flex-direction: column; /* Stack content vertically */
+    overflow-y: auto;
 }
 
 .content {
     flex: 1; /* Pushes the footer to the bottom if content is short */
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -25,6 +28,8 @@ html, body {
     margin: 0; /* Remove any margin around the navbar */
     box-shadow: 0 20px 10px #76A0B3; /* Adjust shadow color and opacity */
     box-sizing: border-box; /* Ensure padding is included in the width calculation */
+    text-decoration: underline;
+    text-decoration-color: white;
 }
 
 .logo-container {
@@ -55,21 +60,54 @@ html, body {
 }
 
 .menu-item a {
-    text-decoration: none;
+    text-decoration: none; /* No underline by default */
     color: white;
     font-size: 16px;
-    transition: color 0.3s;
+    transition: color 0.3s, text-decoration-color 0.3s; /* Smooth transition for color and underline color */
 }
 
 .menu-item a:hover {
-    color: #A07089;
+    text-decoration: underline; /* Add underline on hover */
+    text-decoration-color: #A07089; /* Change underline color on hover */
+    color: #A07089; /* Change text color on hover */
 }
 
 .profile-container {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Align the profile button to the right */
-    margin-right: 0; /* Remove any extra margin */
+    justify-content: flex-end;
+}
+
+/* Hide by default */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    min-width: 150px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    flex-direction: column;
+}
+
+/* Show on hover */
+.profile-container:hover .dropdown-menu {
+    display: flex;
+}
+
+.dropdown-menu a {
+    padding: 10px;
+    text-decoration: none;
+    color: #806774;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
 }
 
 .profile-pic {
@@ -93,8 +131,27 @@ html, body {
     background-color: #806774;
 }
 
+.filter-container {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;;
+}
+
+#filterSelect {
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color: white;
+    opacity: 0.8;
+    color: #806774;
+    cursor: pointer;
+}
+
 .featured-content {
     height: 50vh;
+    width: auto;
     padding: 50px;
 }
 
@@ -118,20 +175,30 @@ html, body {
     border: none;
     outline: none;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.featured-button:hover{
+    background-color: #806774;
+    color: lightgrey;
+    transform: scale(1.05);
 }
 
 .movie-list-container {
     width: 100%;
     max-width: auto-1; /* Set a maximum width for the container */
     margin: 0 auto; /* Center the container */
-    right: 20px;
+    right: 10px;
     position: relative;
     overflow-x: auto; /* Enable horizontal scrolling */
-    /*box-sizing: border-box; /* Include padding and borders in width */
+    box-sizing: border-box; /* Include padding and borders in width */
+    padding-left: 20px;
+    margin-left: auto;
 }
 
 .movie-list-wrapper {
     position: relative;
+    overflow: hidden;
     
 }
 
@@ -143,6 +210,10 @@ html, body {
     flex-wrap: nowrap;
     overflow-x: auto; /* Ensure horizontal scrolling works */
     padding-bottom: 10px; /* Add padding to avoid clipping */
+    padding-left: 5px;
+    transform: translateX(0);
+    transition: all 1;
+    scroll-behavior: smooth;
 }
 
 .movie-list-title {
@@ -219,16 +290,137 @@ html, body {
 }
 
 .arrow-icon {
-    font-size: 30px; /* Make the icon larger for better visibility */
-    color: fuchsia; /* Ensure the color is visible */
-    position: absolute; /* Position the icon relative to the container */
-    top: 50%; /* Center the icon vertically */
-    right: 10px; /* Align it slightly inside the right edge of the container */
-    transform: translateY(-50%); /* Adjust for perfect vertical centering */
-    cursor: pointer; /* Add a pointer cursor for interactivity */
-    z-index: 10; /* Ensure the icon appears sabove the movie posters */
+    font-size: 50px;
+    color: lightblue;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
 }
 
+.arrow-icon.left {
+    left: 10px;
+}
+
+.arrow-icon.right {
+    right: 10px;
+}
+
+
+/* Settings Page */
+/* Applies only to pages with <body class="sidebar-layout"> */
+/* Only applies to pages with class="sidebar-layout" */
+.sidebar-layout {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar at the top */
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background-color: #76A0B3;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    box-shadow: 0 20px 10px #76A0B3;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  /* Sidebar + content side by side */
+  .main-wrapper {
+    display: flex;
+    height: calc(100vh - 60px); /* take up remaining space below navbar */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 200px;
+    background-color: transparent;
+    color: #577785;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px; /* more top padding, horizontal space */
+    gap: 15px; /* adds spacing between links */
+  }
+  
+  .sidebar a {
+    color: #577785;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: font-weight 0.2s;
+  }
+  
+  .sidebar a:hover {
+    font-weight: bold;
+  }
+  
+  /* Optional: highlight the current/active link */
+  .sidebar a.active {
+    font-weight: bold;
+  }
+  
+  
+  /* Main content area */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #E7DED8;
+    overflow-y: auto;
+  }
+
+  .account-info {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #577785;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f6f1ee; /* optional: make it stand out */
+}
+
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .quick-links li {
+    margin-bottom: 10px;
+  }
+  
+  .quick-links a {
+    display: block;
+    padding: 10px 15px;
+    border: 2px solid #577785;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f6f1ee;
+    transition: background-color 0.2s, font-weight 0.2s;
+  }
+  
+  .quick-links a:hover {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  
+  
 
 .footer {
     width: 100%;
