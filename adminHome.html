@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TV Shows Page</title>
+    <title>Home Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="smallLogo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="smallLogo.png">
@@ -16,76 +16,99 @@
         </div>
         <div class="menu-container">
             <ul class="menu">
-                <li class="menu-item"><a href="userHome.html">HOME</a></li>
-                <li class="menu-item"><a href="userMovies.html">MOVIES</a></li>
-                <li class="menu-item"><a href="userShows.html">TV SHOWS</a></li>
-                <li class="menu-item"><a href="userPop.html">POPULAR</a></li>
-                <li class="menu-item"><a href="userRent.html">MY RENTALS</a></li>
+                <li class="menu-item"><a href="adminHome.html">HOME</a></li>
+                <li class="menu-item"><a href="adminMovies.html">MOVIES</a></li>
+                <li class="menu-item"><a href="adminShows.html">TV SHOWS</a></li>
+                <li class="menu-item"><a href="adminPop.html">POPULAR</a></li>
             </ul>
         </div>
         <div class="profile-container">
             <img class="profile-pic" src="Profile_Photo.jpg" alt="Profile Picture">
             <button class="profile-button" id="profileBtn">Profile</button>
             <div class="dropdown-menu" id="dropdownMenu">
-                <a href="userSettings.html">My Account</a>
-                <a href="userSettings.html">Settings</a>
+                <a href="AdminSettings.html">My Account</a>
+                <a href="AdminSettings.html">Settings</a>
                 <a href="#">Log Out</a>
             </div>
         </div>
     </div>
+
     <div class="content">
         <div class = "featured-content"
-            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #E7DED8), url('img/famG.jpg') no-repeat center center/cover;">
-            <!--<img class="featured-title" src="img/Avengers.png" alt="Featured Title">-->
-            <p class ="featured-description2">
-                Sick, twisted and politically incorrect, the animated series features the adventures of the Griffin family. Endearingly ignorant Peter and stay-at-home wife Lois reside in Quahog, R.I., and have three kids. Meg, the eldest child, is a social outcast, and teenage Chris is awkward and clueless when it…</p>
+            style="background: linear-gradient(to bottom, rgba(0,0,0,0), #E7DED8), url('img/seat.jpg')no-repeat center center/cover;">
+            <img class="featured-title" src="img/Avengers.png" alt="Featured Title">
+            <p class ="featured-description">
+                "Marvel's The Avengers" is a superhero team-up movie where 
+                Earth's mightiest heroes (Iron Man, Captain America, Hulk, 
+                Thor, Black Widow, and Hawkeye) are assembled by S.H.I.E.L.D. 
+                to fight Loki's alien invasion led by the Chitauri.</p>
             <button class="featured-button">WATCH</button>
         </div>
-        <div class="filter-container">
-            <select id="filterSelect">
-                <option value="default">Sort/Filter</option>
-                <option value="az">A - Z</option>
-                <option value="za">Z - A</option>
-                <option value="genre-action">Genre: Action</option>
-                <option value="genre-drama">Genre: Drama</option>
-                <option value="genre-comedy">Genre: Comedy</option>
-            </select>
-        </div>
         <div class="movie-list-container">
-            <h1 class="movie-list-title">NEXT BIG BINGE</h1>
+            <h1 class="movie-list-title">YOUR MOST WATCHED</h1>
             <div class="movie-list-wrapper">
                 <div class="arrow-icon left">
                     <i class="fa-solid fa-chevron-left"></i>
                 </div>
-                
                 <div class="movie-list">
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/familyguy.jpg" alt="Movie Poster">
-                        <span class="movie-title">Family Guy</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <img class="movie-poster" src="img/AvenPoster.jpg" alt="Movie Poster">
+                        <span class="movie-title">Avengers</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/911.jpg" alt="Movie Poster">
-                        <span class="movie-title">911</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <img class="movie-poster" src="img/TrapPoster.jpg" alt="Movie Poster">
+                        <span class="movie-title">Trap</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
                         <img class="movie-poster" src="img/Dexter.jpg" alt="Movie Poster">
                         <span class="movie-title">Dexter</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/bb.jpg" alt="Movie Poster">
-                        <span class="movie-title">Breaking Bad</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <img class="movie-poster" src="img/fightclub.jpg" alt="Movie Poster">
+                        <span class="movie-title">Fight Club</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
                         <img class="movie-poster" src="img/GG.jpg" alt="Movie Poster">
                         <span class="movie-title">Gilmore Girls</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/wicked.jpg" alt="Movie Poster">
+                        <span class="movie-title">Wicked</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/yellowJ.jpeg" alt="Movie Poster">
+                        <span class="movie-title">Yellowjackets</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                </div>
+                
+                <div class="arrow-icon right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <h1 class="movie-list-title"> YOUR NEWLY ADDED</h1>
+            <div class="movie-list-wrapper">
+                <div class="arrow-icon left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="movie-list">
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/amerDad.jpg" alt="Movie Poster">
+                        <span class="movie-title">American Dad</span>
                         <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -96,116 +119,26 @@
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/yellowJ.jpeg" alt="Movie Poster">
-                        <span class="movie-title">Yellowjackets</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                </div>
-                
-                <div class="arrow-icon right">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-            </div>
-        </div>
-        <h1 class="movie-list-title">TOP PICKS</h1>
-            <div class="movie-list-wrapper">
-                <div class="arrow-icon left">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
-                <div class="movie-list">
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/thisus.jpg" alt="Movie Poster">
-                        <span class="movie-title">This is us</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/yellowJ.jpeg" alt="Movie Poster">
-                        <span class="movie-title">Yellowjackets</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/crim.jpg" alt="Movie Poster">
-                        <span class="movie-title">Criminal Minds</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/ncis.jpg" alt="Movie Poster">
-                        <span class="movie-title">NCIS</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/GG.jpg" alt="Movie Poster">
-                        <span class="movie-title">Gilmore Girls</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/sponge.jpg" alt="Movie Poster">
-                        <span class="movie-title">Spongebob</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/modernF.jpg" alt="Movie Poster">
-                        <span class="movie-title">Modern Family</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                </div>
-                <div class="arrow-icon right">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </div>
-            </div>
-            <h1 class="movie-list-title">AWARD-WINNING SHOWS</h1>
-            <div class="movie-list-wrapper">
-                <div class="arrow-icon left">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </div>
-                <div class="movie-list">
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/modernF.jpg" alt="Movie Poster">
-                        <span class="movie-title">Modern Family</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/sponge.jpg" alt="Movie Poster">
-                        <span class="movie-title">Spongebob</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/bb.jpg" alt="Movie Poster">
-                        <span class="movie-title">Breaking Bad</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/amerDad.jpg" alt="Movie Poster">
-                        <span class="movie-title">American Dad</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
-                        <img class="movie-poster" src="img/Dexter.jpg" alt="Movie Poster">
-                        <span class="movie-title">Dexter</span>
-                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
-                        <button class="movie-button">WATCH</button>
-                    </div>
-                    <div class="movie-list-item">
                         <img class="movie-poster" src="img/nciso.jpg" alt="Movie Poster">
                         <span class="movie-title">NCIS Origins</span>
                         <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
                     <div class="movie-list-item">
-                        <img class="movie-poster" src="img/GG.jpeg" alt="Movie Poster">
-                        <span class="movie-title">Gilmore Girls</span>
+                        <img class="movie-poster" src="img/swV.jpg" alt="Movie Poster">
+                        <span class="movie-title">Star Wars: The Empire Strikes Back</span>
+                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/dm.jpg" alt="Movie Poster">
+                        <span class="movie-title">Despicable Me</span>
+                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/savingPR.jpg" alt="Movie Poster">
+                        <span class="movie-title">Saving Private Ryan</span>
                         <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
                         <button class="movie-button">WATCH</button>
                     </div>
@@ -214,7 +147,66 @@
                     <i class="fa-solid fa-chevron-right"></i>
                 </div>
             </div>
-            <h1 class="movie-list-title">HIGHLY RATED</h1>
+            <h1 class="movie-list-title">YOUR POPULAR MOVIES</h1>
+            <div class="movie-list-wrapper">
+                <div class="arrow-icon left">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="movie-list">
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/swIV.jpg" alt="Movie Poster">
+                        <span class="movie-title">Star Wars: A New Hope</span>
+                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/blackPW.jpg" alt="Movie Poster">
+                        <span class="movie-title">Black Panther: Wakanda Forever</span>
+                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/swV.jpg" alt="Movie Poster">
+                        <span class="movie-title">Star Wars: The Empire Strikes Back</span>
+                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/johnWick.jpg" alt="Movie Poster">
+                        <span class="movie-title">John Wick</span>
+                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/pitchP.jpg" alt="Movie Poster">
+                        <span class="movie-title">Pitch Perfect</span>
+                        <p class="movie-description">Lorem ipsum dolor sit amet, his cu graeci eripuit, ferri facer adolescens duo no. Sale ancillae vis te, dicunt prompta vis eu. Mel simul ornatus id, ne eam nominati patrioque. Vis accusam adolescens id. No sea discere dolores.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/ACS.jpg" alt="Movie Poster">
+                        <span class="movie-title">Another Cinderella Story</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/wicked.jpg" alt="Movie Poster">
+                        <span class="movie-title">Wicked</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-poster" src="img/annabelle.jpg" alt="Movie Poster">
+                        <span class="movie-title">Annabelle</span>
+                        <p class="movie-description">"Marvel's The Avengers" is a superhero team-up movie where Earth's mightiest heroes defend Earth from Loki's alien invasion.</p>
+                        <button class="movie-button">WATCH</button>
+                    </div>
+                </div>
+                <div class="arrow-icon right">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <h1 class="movie-list-title">YOUR TOP RATED SHOWS</h1>
             <div class="movie-list-wrapper">
                 <div class="arrow-icon left">
                     <i class="fa-solid fa-chevron-left"></i>
