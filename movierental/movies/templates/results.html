@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    {% if query %}
+        <p>You searched for: <strong>{{ query }}</strong></p>
+    {% endif %}
+
+    {% if results %}
+        <ul>
+            {% for movie in results %}
+                <li>
+                    <a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a> ({{ movie.genre }})
+                    <p>{{ movie.description|truncatechars:100 }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        {% if query %}
+            <p>No movies found matching your search criteria.</p>
+        {% else %}
+            <p>Please enter a search term to find movies.</p>
+        {% endif %}
+    {% endif %}
+    <p><a href="{% url 'search' %}">Back to Search</a></p>
+
+</body>
+</html>
