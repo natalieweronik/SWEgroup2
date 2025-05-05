@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Cinderella Story</title>
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+    <link rel="shortcut icon" href="{% static 'smallLogo.png'%}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'smallLogo.png'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class = "video">
+    <div class="navbar">
+        <div class="logo-container">
+            <a href="{% url 'userhome' %}"><img class="logo" src="{% static 'nLogo.png'%}" alt="Logo"></a>
+        </div>
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="menu-item"><a href="{% url 'userhome' %}">HOME</a></li>
+                <li class="menu-item"><a href="{% url 'usermovies' %}">MOVIES</a></li>
+                <li class="menu-item"><a href="{% url 'usershow' %}">TV SHOWS</a></li>
+                <li class="menu-item"><a href="{% url 'userpop' %}">POPULAR</a></li>
+                <li class="menu-item"><a href="{% url 'userrent' %}">MY RENTALS</a></li>
+            </ul>
+        </div>
+        <div class="profile-container">
+            <img class="profile-pic" src="{% static 'Profile_Photo.jpg'%}" alt="Profile Picture">
+            <button class="profile-button" id="profileBtn">Profile</button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="{% url 'userset' %}">My Account</a>
+                <a href="{% url 'userset' %}">Settings</a>
+                <a href="{% url 'log_in' %}">Log Out</a>
+            </div>
+        </div>
+    </div>
+    <div class="video-player">
+        <div id="player"></div>
+    
+        <div class="controls">
+          <button id="playPauseBtn">Play</button>
+          <button id="muteBtn">Mute</button>
+        </div>
+    
+        <div class="video-info">
+          <h2>Another Cinderella Story</h2>
+          <p>Mary is a modern Cinderella with dancing shoes instead of glass shoes. Joey is a charming newcomer to the school looking for a girl to shower with love. Maybe Mary is the right one.</p>
+        </div>
+      </div>
+      <script src="https://www.youtube.com/iframe_api"></script>
+      <script src="{% static 'youtubePlayer.js'%}"></script>
+</body>
+</html>

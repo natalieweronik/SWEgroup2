@@ -8,7 +8,13 @@ movie5 = Movie_Table(title='Jumanji', movie_fmat='HD',director='Joe Johnston',ge
 movies_list = [movie1, movie2, movie3, movie4, movie5]
 for x in movies_list:
 x.save()
-Member.objects.all().values()
+from movies.models import User_Table
+user1 = User_Table(email='user@gmail.com', password='1234', address='123 Name Road State ZIP', name='Jane Doe', phone=1238467890)
+user1.save()
+user2 = User_Table(email='admin@company.com', password='1234', address='123 Name Road State ZIP', name='Jane Doe', phone=1238467890)
+user2.save()
+Movie_Table.objects.all().values()
+User_Table.objects.all().values()
 
 tables:
 class Movie_Table(models.Model):    

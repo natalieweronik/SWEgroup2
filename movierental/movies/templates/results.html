@@ -17,7 +17,6 @@
             {% for movie in results %}
                 <li>
                     <a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a> ({{ movie.genre }})
-                    <p>{{ movie.description|truncatechars:100 }}</p>
                 </li>
             {% endfor %}
         </ul>
